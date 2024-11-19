@@ -1,50 +1,60 @@
-# React + TypeScript + Vite
+# Movie App Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based movie application built with Vite, showcasing movies with filters, expandable details, and smooth loading states.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Filter Movies:** Filter movies based on title, genre, and year.
+- **Expandable Details:** View detailed information about movies, including plot, genre, director, and year.
+- **Skeleton Loading:** Smooth loading experience using skeleton loaders.
+- **Responsive Design:** Optimized UI for various screen sizes.
+- **Modern UI Components:** Built using Material UI for a sleek and user-friendly interface.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- **Node.js**: `v18.x` or higher
+- **npm**: `v9.x` or higher (or `pnpm`/`yarn` as alternatives)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Tech Stack
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Vite**: For fast development and production builds.
+- **React**: Frontend library.
+- **Material UI**: UI components for React.
+- **Lucide-react**: Icon library for React.
+- **Framer Motion**: For animations.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+
+## Setup and Installation
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
+
+2. **Install Dependencies**:
+   ````bash
+   npm install
+   # OR
+   pnpm install```
+   ````
+3. **Create an Environment File**: Create a .env file in the project root and include the following variables:
+
+   ```bash
+   VITE_OMDB_API_KEY=<OMDB_API_KEY>
+   VITE_API_BASE_URL=<API_BASE_URL>
+   ```
+
+4. **Run the Application:**
+
+   ```bash
+   npm run dev
+   # OR  
+   pnpm run dev
+   ```
